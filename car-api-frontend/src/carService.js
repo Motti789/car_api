@@ -10,7 +10,10 @@ class CarService{
      fetch(`${this.endpoint}/cars`)
      .then(resp => resp.json())
      .then(cars => {
-      debugger
+      for (const car of cars) {
+        const c = new Car(car)
+        c.slapOnDom()
+      }
     })
 
   }
