@@ -17,7 +17,7 @@ class Car {
         this.element.dataset.id = this.id
         this.element.id = `car-${this.id}`
      
-     
+        this.element.addEventListener('click', this.handleClick)
         Car.all.push(this)
     }
 
@@ -31,7 +31,11 @@ class Car {
       <p> Interior Color: ${this.interior_color}</p>
       <p> Fuel Type: ${this.fuel_type}</p>
       <p> ID: ${this.category_id}</p>
-      </div> `
+      </div> 
+      <button id='delete-bttn'>Delete</button>
+      <br>
+      <br>
+      `
 
       return this.element
   }
@@ -50,8 +54,16 @@ class Car {
         Interior Color: <input type="text" id="interior_color">
         Fuel Type: <input type="text" id="fuel_type">
         <input type="submit" id="create">
-      <form>  `
+      <form>  
+      `
   }
+
+   handleClick = () => {
+       if (event.target.innerText === 'Delete') {
+           carService.deleteCar(this.id)
+       }   
+
+   }
 
 }
 

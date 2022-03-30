@@ -39,9 +39,21 @@ class CarService{
   fetch(`${this.endpoint}/cars`, configObj)
      .then(resp => resp.json())
      .then(car => {
-       console.log(car)
+       const c = new Car(car)
+       c.slapOnDom()
      })
 
+  }
+
+  deleteCar(id){
+      fetch(`${this.endpoint}/cars/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+      })
+      .then(resp => resp.json())
+      .then(json => alert(json.message))
   }
 
 }
