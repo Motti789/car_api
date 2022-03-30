@@ -5,6 +5,7 @@ class Car {
     static carForm = document.getElementById("form-container")
 
     constructor({id, brand, model, exterior_color, interior_color, fuel_type, category_id}) {
+        this.id = id
         this.brand = brand
         this.model = model
         this.exterior_color = exterior_color
@@ -18,26 +19,25 @@ class Car {
      
      
         Car.all.push(this)
+    }
 
-  }
-
-  contactHTML() {
+  carHTML() {
       this.element.innerHTML += `
       <div> 
       <h3>${this.brand}</h3>
 
-      <p>${this.model}</p>
-      <p>${this.exterior_color}</p>
-      <p>${this.interior_color}</p>
-      <p>${this.fuel_type}</p>
-      <p>${this.category_id}</p>
+      <p> Model: ${this.model}</p>
+      <p> Exterior Color: ${this.exterior_color}</p>
+      <p> Interior Color: ${this.interior_color}</p>
+      <p> Fuel Type: ${this.fuel_type}</p>
+      <p> ID: ${this.category_id}</p>
       </div> `
 
       return this.element
   }
 
   slapOnDom() {
-   Car.carContainer.appendChild(this.contactHTML())
+   Car.carContainer.appendChild(this.carHTML())
 
   }
 

@@ -18,4 +18,30 @@ class CarService{
 
   }
 
+  createCar(){
+  const car = {
+    brand: document.getElementById('brand').value,
+    model: document.getElementById('model').value,
+    exterior_color: document.getElementById('exterior_color').value,
+    interior_color: document.getElementById('interior_color').value,
+    fuel_type: document.getElementById('fuel_type').value,
+    category_id: 1
+  }
+  
+  const configObj = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(car)
+  } 
+
+  fetch(`${this.endpoint}/cars`, configObj)
+     .then(resp => resp.json())
+     .then(car => {
+       console.log(car)
+     })
+
+  }
+
 }

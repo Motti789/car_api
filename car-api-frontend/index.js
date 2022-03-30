@@ -6,6 +6,8 @@ carService.getCars()
 Car.renderForm()
 
 
-function handleSubmit() {
-    debugger
+function handleSubmit(){
+    event.preventDefault()
+    carService.createCar()
+    event.target.reset()
 }
