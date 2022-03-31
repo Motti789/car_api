@@ -5,12 +5,12 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
 
-    render json: @cars
+    render json: @cars.to_json(except: [:created_at, :updated_at])
   end
 
   # GET /cars/1
   def show
-    render json: @car
+    render json: @car.to_json(except: [:created_at, :updated_at])
   end
 
   # POST /cars
@@ -36,6 +36,7 @@ class CarsController < ApplicationController
   # DELETE /cars/1
   def destroy
     @car.destroy
+    render json: {message: "Category successfully deleted"}
   end
 
   private

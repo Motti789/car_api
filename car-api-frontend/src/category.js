@@ -2,7 +2,7 @@ class Category {
 
     static all = []
     static categoryContainer = document.getElementById("categories-container")
-    static categoryForm = document.getElementById("form-container") 
+    
 
     constructor({id, name}) {
         this.id = id
@@ -17,7 +17,7 @@ class Category {
     categoryHTML() {
         this.element.innerHTML += `
         <div>
-        <h3> Catgory: ${this.name}</h3>
+        <h3> Category: ${this.name}</h3>
         </div>
         `
         return this.element
@@ -27,12 +27,4 @@ class Category {
         Category.categoryContainer.appendChild(this.categoryHTML())
     }
     
-    static renderForm() {
-        Category.categoryForm.innerHTML += `
-          <form id="new-category-form">
-          Name: <input type="text" id="name">
-          <input type="submit" id="create">
-        <form>  
-        `
-    }
 }
