@@ -6,6 +6,10 @@ Car.carForm.addEventListener('submit', handleSubmit)
 carService.getCars()
 Car.renderForm()
 
+const categoryService = new CategoryService(base_url)
+categoryService.getCategories()
+Category.renderForm()
+
 
 function handleSubmit(){
     event.preventDefault()
