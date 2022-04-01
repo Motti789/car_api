@@ -48,6 +48,14 @@ class Car {
   static renderForm() {
       Car.carForm.innerHTML += `
         <form id="new-car-form">
+        <label for="categories">Car Category:</label>
+        <select name="categories" id="categories">
+        <option value="suv">SUV</option>
+        <option value="van">Van</option>
+        <option value="electric">Electric</option>
+        <option value="minivan">Minivan</option>
+        </select>
+        <br>
         Brand: <input type="text" id="brand">
         Model: <input type="text" id="model">
         Exterior Color: <input type="text" id="exterior_color">

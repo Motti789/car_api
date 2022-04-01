@@ -53,7 +53,8 @@ class CarService{
         }
       })
       .then(resp => resp.json())
-      .then(json => alert(json.message))
+      .then(setTimeout(() => {
+        window.location.reload()}, .1000))
   }
 
 }

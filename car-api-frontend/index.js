@@ -8,7 +8,7 @@ Car.renderForm()
 
 const categoryService = new CategoryService(base_url)
 categoryService.getCategories()
-Category.renderForm()
+
 
 
 function handleSubmit(){
