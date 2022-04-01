@@ -15,8 +15,9 @@ class CarsController < ApplicationController
 
   # POST /cars
   def create
+    
     @car = Car.new(car_params)
-
+    
     if @car.save
       render json: @car, status: :created, location: @car
     else

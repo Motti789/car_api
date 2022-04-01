@@ -19,13 +19,16 @@ class CarService{
   }
 
   createCar(){
+  
   const car = {
     brand: document.getElementById('brand').value,
     model: document.getElementById('model').value,
     exterior_color: document.getElementById('exterior_color').value,
     interior_color: document.getElementById('interior_color').value,
     fuel_type: document.getElementById('fuel_type').value,
-    category_id: 1
+    category_id: parseInt(document.querySelector('#categories').value)
+    
+
   }
   
   const configObj = {
@@ -35,10 +38,10 @@ class CarService{
     },
     body: JSON.stringify(car)
   } 
-
+  
   fetch(`${this.endpoint}/cars`, configObj)
      .then(resp => resp.json())
-     .then(car => {
+     .then(car => { 
        const c = new Car(car)
        c.slapOnDom()
      })
