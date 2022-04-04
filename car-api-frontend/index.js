@@ -7,7 +7,8 @@ carService.getCars()
 Car.renderForm()
 
 const categoryService = new CategoryService(base_url)
-categoryService.getCategories()
+ categoryService.getCategories()
+ Category.renderCategoryForm()
 
 
 

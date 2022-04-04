@@ -2,6 +2,7 @@ class Category {
 
     static all = []
     static categoryContainer = document.getElementById("categories-container")
+    static categoryForm = document.getElementById("form-container")
     
 
     constructor({id, name}) {
@@ -26,5 +27,18 @@ class Category {
     slapOnDom() {
         Category.categoryContainer.appendChild(this.categoryHTML())
     }
-    
+
+    static renderCategoryForm() {
+        Category.categoryForm.innerHTML += `
+          <form id="category-form">
+          <label for="category">Category:</label>
+          <select name="category" id="category">
+          <option value="1">SUV</option>
+          <option value="2">Van</option>
+          <option value="3">Electric</option>
+          <option value="4">Minivan</option>
+          </select>
+          <form>  
+          `
+      }
 }

@@ -19,7 +19,6 @@ class CarService{
   }
 
   createCar(){
-  
   const car = {
     brand: document.getElementById('brand').value,
     model: document.getElementById('model').value,
@@ -27,8 +26,6 @@ class CarService{
     interior_color: document.getElementById('interior_color').value,
     fuel_type: document.getElementById('fuel_type').value,
     category_id: parseInt(document.querySelector('#categories').value)
-    
-
   }
   
   const configObj = {
