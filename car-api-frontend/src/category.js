@@ -1,4 +1,4 @@
-class Category {
+class Category  {
 
     static all = []
     static categoryContainer = document.getElementById("categories-container")
@@ -38,7 +38,19 @@ class Category {
           <option value="3">Electric</option>
           <option value="4">Minivan</option>
           </select>
+          <input type="submit" id="create">
           <form>  
           `
-      }
+        }
+
+        // static filteredCars() {
+        //   Car.all.filter(carByCategory)
+        // }
+
+        // carByCategory() {
+        //     debugger;
+        //     console.log(`This is working`)
+            
+        // }
 }
+ 
