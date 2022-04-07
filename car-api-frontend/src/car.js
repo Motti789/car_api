@@ -2,7 +2,7 @@ class Car {
     // remember objects
     static all = []
     static carContainer = document.getElementById("cars-container")
-    static carForm = document.getElementById("form-container")
+    static carForm = document.getElementById("car-form-container")
 
     constructor({id, brand, model, exterior_color, interior_color, fuel_type, category_id}) {
         this.id = id
@@ -36,9 +36,8 @@ class Car {
       <br>
       <br>
       `
-
       return this.element
-  }
+    }
 
   slapOnDom() {
    Car.carContainer.appendChild(this.carHTML())
@@ -51,11 +50,11 @@ class Car {
         <label for="category">Car Category:</label>
         <select name="categories" id="categories">
         <option value="1">SUV</option>
-        <option value="2">Van</option>
-        <option value="3">Electric</option>
-        <option value="4">Minivan</option>
+        <option value="2">Electric</option>
+        <option value="3">Van</option>
         </select>
         <br>
+        
         Brand: <input type="text" id="brand">
         Model: <input type="text" id="model">
         Exterior Color: <input type="text" id="exterior_color">

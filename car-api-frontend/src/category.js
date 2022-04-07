@@ -2,7 +2,7 @@ class Category  {
 
     static all = []
     static categoryContainer = document.getElementById("categories-container")
-    static categoryForm = document.getElementById("form-container")
+    static categoryForm = document.getElementById("category-form-container")
     
 
     constructor({id, name}) {
@@ -15,14 +15,14 @@ class Category  {
         Category.all.push(this)
     }
 
-    categoryHTML() {
-        this.element.innerHTML += `
-        <div>
-        <h3> Category: ${this.name}</h3>
-        </div>
-        `
-        return this.element
-    }
+     categoryHTML() {
+         this.element.innerHTML += `
+         <div>
+         <h3> Category: ${this.name}</h3>
+         </div>
+         `
+         return this.element
+     }
 
     slapOnDom() {
         Category.categoryContainer.appendChild(this.categoryHTML())
@@ -33,24 +33,14 @@ class Category  {
           <form id="category-form">
           <label for="category">Category:</label>
           <select name="category" id="category">
-          <option value="1">SUV</option>
-          <option value="2">Van</option>
-          <option value="3">Electric</option>
-          <option value="4">Minivan</option>
+          <option value="" disabled selected>Select your option</option>
+          <option value="1" >SUV</option>
+          <option value="2">Electric</option>
+          <option value="3">Van</option>
+          
           </select>
-          <input type="submit" id="create">
           <form>  
           `
         }
-
-        // static filteredCars() {
-        //   Car.all.filter(carByCategory)
-        // }
-
-        // carByCategory() {
-        //     debugger;
-        //     console.log(`This is working`)
-            
-        // }
 }
  
