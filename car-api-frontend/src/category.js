@@ -39,7 +39,7 @@ class Category  {
           <option value="3">Van</option>
           
           </select>
-          <form>  
+          </form>  
           `
         }
 }

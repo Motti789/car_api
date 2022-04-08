@@ -8,7 +8,7 @@ Car.renderForm()
 
 
 const categoryService = new CategoryService(base_url)
-//  categoryService.getCategories()
+// categoryService.getCategories()
 Category.categoryForm.addEventListener('change', handleCategorySubmit)
 Category.renderCategoryForm()
 
@@ -22,18 +22,21 @@ function handleCarSubmit(){
 
  function handleCategorySubmit() {
       // We remove the car container elements from the dom
-     let cars = Car.carContainer
-     cars.innerHTML = ""
+    let cars = Car.carContainer
+    cars.innerHTML = ""
         
-     let c = event.target.value 
-     let parsed = parseInt(c, 10)
-     let selectedCars = Car.all.filter(car => car.category_id === parsed)
+    let c = event.target.value 
+    
+    let parsed = parseInt(c, 10)
+    let selectedCars = Car.all.filter(car => car.category_id === parsed)
+    
        //  re-add the elements to the dom    
-     for (const cars of selectedCars) {
-     const c = new Car(cars)
-     c.slapOnDom()
-     event.target.reset()
+    for (const cars of selectedCars) {
+    const c = new Car(cars)
+    c.slapOnDom()
+    // event.target.reset()
     }
-    }
+    
+  }
 
 

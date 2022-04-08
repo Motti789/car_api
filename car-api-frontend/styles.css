@@ -1,26 +1,45 @@
-*{
-    box-sizing: border-box; 
-    font-family: 'Playfair Display', serif;
-    font-size: medium;
-    color: grey;
-    background: lightblue;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
-div {
-    width: 1000px;
-    margin: auto;
-    font-family: Helvetica Neue;
-    
-    padding: 30px;
-     
+
+   body{
+    background: lightblue;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    color: grey;
+   }
+
+ .title{
+   text-align:center; 
+   
   }
 
-  body{
-    padding:0; 
-    margin:0; 
-    height: 100%;
-    width: 100%; 
-    display:flex;
-    justify-content: left; 
-    flex-direction: column; 
-}
+  #cars-container {
+    color: grey; 
+  }
+
+  li {
+    float: left;
+    padding-left:150px;
+    margin-top: 50px;
+    text-align:center;
+    list-style: none;
+    
+  }
+
+  #car-form-container {
+    position: absolute;
+    right: 400px;
+    width: 50%;
+    bottom: 20px;
+    border: 3px solid #8AC007;
+    text-align:center;
+    
+  }
+
+  #category-form-container{
+    position: absolute;
+    right: 700px;
+  
+
+  }
+
