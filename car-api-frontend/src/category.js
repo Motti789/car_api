@@ -31,7 +31,7 @@ class Category  {
     static renderCategoryForm() {
         Category.categoryForm.innerHTML += `
           <form id="category-form">
-          <label for="category">Category:</label>
+          <u><label for="category">Category:</u></label>
           <select name="category" id="category">
           <option value="" disabled selected>Select your option</option>
           <option value="1" >SUV</option>
