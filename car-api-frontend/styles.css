@@ -4,6 +4,8 @@
    body{
     background: rgb(0, 0, 112);
     max-width: fit-content;
+    margin:auto;
+    
     
 
     background-attachment: fixed;
@@ -22,27 +24,25 @@
    font-family: 'Josefin Sans', sans-serif;
    font-size: larger;
    color: blanchedalmond;
-   
-   
   
   }
 
   #cars-container {
+    
     color: grey; 
   }
 
   li {
     
     float: left;
-    padding-left:150px;
+    padding-left:60px;
     margin-top: 50px;
     text-align:center;
     list-style: none;
     font-weight: bold;
     color: rgb(111, 191, 194);
-
-   
     
+
     
   }
 
@@ -50,9 +50,6 @@
     
     position: fixed;
     bottom: 0px;
-
-    
-    
     right: 0px;
     width: 100%;
     border: 3px solid #8AC007;
@@ -62,7 +59,7 @@
   }
 
   #category-form-container{
-    position: absolute;
+    position: fixed;
     right: 700px;
     font-family: 'Josefin Sans', sans-serif;
     color: rgb(223, 176, 176);
@@ -72,23 +69,14 @@
   #delete-bttn{
     font-family: 'Times New Roman', Times, serif;
     
-    
   }
 
 
-
-
-    /* .img-tesla{
-    position: absolute;
-    width: 2em;
-    height: 3em;
-    top: 0px;
-    margin-left: 0;
-  } */
+  
 
   .img-cars{
     text-align:center;
     background-color: lightblue;
     
-     
+    
   }

@@ -23,7 +23,7 @@ class Car {
     }
 
   carHTML() {
-      this.element.innerHTML += `
+      this.element.innerHTML  = `
       <div> 
       <h3>${this.brand}</h3>
 
@@ -37,7 +37,7 @@ class Car {
       <br>
       <br>
       `
-      return this.element
+     return this.element
     }
 
   slapOnDom() {
@@ -67,7 +67,7 @@ class Car {
         <input type="submit" id="create">
       </form>  
       `
-  }
+    }
 
     // static renderImg() {
     //   Car.carImage.innerHTML += `

@@ -24,9 +24,9 @@ class Category  {
          return this.element
      }
 
-    slapOnDom() {
+     slapOnDom() {
         Category.categoryContainer.appendChild(this.categoryHTML())
-    }
+     }
 
     static renderCategoryForm() {
         Category.categoryForm.innerHTML += `

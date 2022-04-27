@@ -15,28 +15,26 @@ Category.renderCategoryForm()
 
 
 
-function handleCarSubmit(){
+function handleCarSubmit(event){
     event.preventDefault()
     carService.createCar()
     event.target.reset()
 }
 
- function handleCategorySubmit() {
+ function handleCategorySubmit(event) {
       // We remove the car container elements from the dom
-    let cars = Car.carContainer
-    cars.innerHTML = ""
-        
+      
+    Car.carContainer.innerHTML = ""
+
     let c = event.target.value 
-    
     let parsed = parseInt(c, 10)
     let selectedCars = Car.all.filter(car => car.category_id === parsed)
     
-       //  re-add the elements to the dom    
-    for (const car of selectedCars) {
-    car.slapOnDom()
-     
-    }
-    
+      //  re-add the elements to the dom 
+     for (const car of selectedCars) {
+        debugger;
+      car.slapOnDom()
+      }
   }
 
 
