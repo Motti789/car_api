@@ -1,6 +1,8 @@
 class Car {
     // remember objects
     static all = []
+
+    // Get the elements
     static carContainer = document.getElementById("cars-container")
     static carForm = document.getElementById("car-form-container")
     static carImage = document.getElementsByClassName("img-cars")
@@ -45,48 +47,37 @@ class Car {
   }
 
   static renderForm() {
-      Car.carForm.innerHTML += `
+      Car.carForm.innerHTML = `
         <form id="new-car-form">
-         <p>Add a new car here: 
+          <p>Add a new car here: 
+          <br>
+          <br>
+         <label for="category">Car Category:</label>
+         <select name="categories" id="categories">
+         <option value="1">SUV</option>
+         <option value="2">Electric</option>
+         <option value="3">Van</option>
+         </select>
          <br>
-         <br>
-        <label for="category">Car Category:</label>
-        <select name="categories" id="categories">
-        <option value="1">SUV</option>
-        <option value="2">Electric</option>
-        <option value="3">Van</option>
-        </select>
-        <br>
-        
-        </p>
-        Brand: <input type="text"  id="brand" required> 
-        Model: <input type="text" id="model" required>
-        Exterior Color: <input type="text" id="exterior_color" required>
-        Interior Color: <input type="text" id="interior_color" required>
-        Fuel Type: <input type="text" id="fuel_type" required>
-        <input type="submit" id="create">
-      </form>  
+         
+         </p>
+         Brand: <input type="text"  id="brand" required> 
+         Model: <input type="text" id="model" required>
+         Exterior Color: <input type="text" id="exterior_color" required>
+         Interior Color: <input type="text" id="interior_color" required>
+         Fuel Type: <input type="text" id="fuel_type" required>
+         <input type="submit" id="create">
+       </form>  
       `
     }
 
-    // static renderImg() {
-    //   Car.carImage.innerHTML += `
-    //   <img src="https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1"
-    //  width="700" 
-    //  height="150">
-
-    //  </img> `
-    // }
-
-
-
-   handleClick = () => {
+   // Event handler for the delete button.
+   handleClick = (event) => {
        if (event.target.innerText === 'Delete') {
            carService.deleteCar(this.id)
        }   
 
    }
-
 }
 
 

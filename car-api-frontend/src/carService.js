@@ -15,11 +15,10 @@ class CarService{
         c.slapOnDom()
       }
     })
-
   }
 
   createCar(){
-  const car = {
+   const car = {
     brand: document.getElementById('brand').value,
     model: document.getElementById('model').value,
     exterior_color: document.getElementById('exterior_color').value,
@@ -54,7 +53,9 @@ class CarService{
       })
       .then(resp => resp.json())
       .then(reload => {
+        alert("Car Successfully Deleted")
         window.location.reload()})
   }
+
 
 }
