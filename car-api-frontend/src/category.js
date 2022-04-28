@@ -16,20 +16,20 @@ class Category  {
     }
 
      categoryHTML() {
-         this.element.innerHTML += `
+         this.element.innerHTML = `
          <div>
          <h3> Category: ${this.name}</h3>
          </div>
          `
          return this.element
-     }
+       }
 
      slapOnDom() {
         Category.categoryContainer.appendChild(this.categoryHTML())
      }
 
     static renderCategoryForm() {
-        Category.categoryForm.innerHTML += `
+        Category.categoryForm.innerHTML = `
           <form id="category-form">
           <u><label for="category">Category:</u></label>
           <select name="category" id="category">
@@ -41,6 +41,6 @@ class Category  {
           </select>
           </form>  
           `
-        }
+   }
 }
  

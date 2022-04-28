@@ -56,6 +56,4 @@ class CarService{
         alert("Car Successfully Deleted")
         window.location.reload()})
   }
-
-
 }

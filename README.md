@@ -1,24 +1,19 @@
-# README
+##car_api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Flatiron School Javascript Project - car_api is built with a Javascript frontend and a Rails API backend. car_api is a car brochure app which can be used to show customers an inventory of all available cars.
 
-Things you may want to cover:
+#Installation
+Fork and clone this repository to your local machine.
 
-* Ruby version
+In your terminal, navigate to the "backend" directory and install the dependencies by executing the below command in your terminal: 
+$ bundle install
 
-* System dependencies
+then execute "rails s" to start the server.
 
-* Configuration
+Then, navigate to the "frontend" directory and open index.html
 
-* Database creation
+#Usage
+Upon launching this app, the user will be able to view all the available cars, filter out to view a specific make of a car, add new cars to the list, and delete cars which are no longer available.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License:
+The system is available as open source under the terms of the MIT License.
