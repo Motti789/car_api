@@ -20,4 +20,4 @@ Upon launching this app, the user will be able to view all the available cars, f
 
 License:
 ---
-The system is available as open source under the terms of the [MIT License](LICENSE).
+The system is available as open source under the terms of the [MIT License](LICENSE.MD).
