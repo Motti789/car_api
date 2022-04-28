@@ -7,12 +7,12 @@ Installation
 ---
 Fork and clone this repository to your local machine.
 
-In your terminal, navigate to the "backend" directory and install the dependencies by executing the below command in your terminal: 
+In your terminal, navigate to the backend directory and install the dependencies by executing the below command in your terminal: 
 $ bundle install
 
-then execute "rails s" to start the server.
+Then execute "rails s" to start the server.
 
-Then, navigate to the "frontend" directory and open index.html
+Then, navigate to the frontend directory and open index.html
 
 Usage
 ---
@@ -20,4 +20,4 @@ Upon launching this app, the user will be able to view all the available cars, f
 
 License:
 ---
-The system is available as open source under the terms of the MIT License.
+The system is available as open source under the terms of the [MIT License](LICENSE).
