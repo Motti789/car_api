@@ -52,8 +52,7 @@ class CarService{
         }
       })
       .then(resp => resp.json())
-      .then(reload => {
-        alert("Car Successfully Deleted")
-        window.location.reload()})
+      .then(alert => ("Car Successfully Deleted")
+      )
   }
 }

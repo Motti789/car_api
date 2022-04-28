@@ -74,9 +74,9 @@ class Car {
    // Event handler for the delete button.
    handleClick = (event) => {
        if (event.target.innerText === 'Delete') {
+           event.target.parentNode.remove()
            carService.deleteCar(this.id)
        }   
-
    }
 }
 
