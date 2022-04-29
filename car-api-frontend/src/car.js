@@ -69,9 +69,7 @@ class Car {
          Fuel Type: <input type="text" id="fuel_type" required>
          <input type="submit" id="create">
        </form>  
-
-       
-      `
+       `
     }
 
     // Event handler for the delete button.

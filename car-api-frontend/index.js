@@ -19,23 +19,30 @@ function handleCarSubmit(event){
     event.target.reset()
 }
 
- function handleCategorySubmit(event) {
-    // We remove the car container elements from the dom
-    Car.carContainer.innerHTML = ""
-    let c = event.target.value 
-    let parsed = parseInt(c, 10)
-    let selectedCars = Car.all.filter(car => car.category_id === parsed)
-    
-     //  re-add the elements to the dom 
-     for (const car of selectedCars) {
-      car.slapOnDom()
-    }
-    // Display all of the cars if the user wasnts to go back.
-    if (event.target.value === '0') {
-     let selectedCars = Car.all
-     for (const car of selectedCars) {
-      car.slapOnDom()
-    }
-    }
+  function handleCategorySubmit(event) {
+  // We remove the car container elements from the dom
+  Car.carContainer.innerHTML = ""
+  let c = event.target.value 
+  let parsed = parseInt(c, 10)
+  let selectedCars = Car.all.filter(car => car.category_id === parsed)
+  
+   //  re-add the elements to the dom 
+   for (const car of selectedCars) {
+    car.slapOnDom()
   }
+  // Display all of the cars if the user wants to go back.
+  if (event.target.value === '0') {
+   let selectedCars = Car.all
+   for (const cars of selectedCars) {
+    cars.slapOnDom()
+  }
+  }
+}
+
+  
+  
+
+
+
+
   
