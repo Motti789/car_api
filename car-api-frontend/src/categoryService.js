@@ -1,7 +1,5 @@
 class CategoryService {
 
-  
- 
     constructor(endpoint){
      this.endpoint = endpoint
     }
@@ -15,6 +13,5 @@ class CategoryService {
           c.slapOnDom()
         }
       })
-
     }
 }

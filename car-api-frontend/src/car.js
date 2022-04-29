@@ -42,6 +42,7 @@ class Car {
      return this.element
     }
 
+
   slapOnDom() {
    Car.carContainer.appendChild(this.carHTML())
   }
@@ -49,7 +50,7 @@ class Car {
   static renderForm() {
       Car.carForm.innerHTML = `
         <form id="new-car-form">
-          <p>Add a new car here: 
+          <p><u>Add a new car here:</u>
           <br>
           <br>
          <label for="category">Car Category:</label>
@@ -68,11 +69,13 @@ class Car {
          Fuel Type: <input type="text" id="fuel_type" required>
          <input type="submit" id="create">
        </form>  
+
+       
       `
     }
 
-   // Event handler for the delete button.
-   handleClick = (event) => {
+    // Event handler for the delete button.
+      handleClick = (event) => {
        if (event.target.innerText === 'Delete') {
            event.target.parentNode.remove()
            carService.deleteCar(this.id)

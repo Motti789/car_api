@@ -34,6 +34,7 @@ class Category  {
           <u><label for="category">Category:</u></label>
           <select name="category" id="category">
           <option value="" disabled selected>Select your option</option>
+          <option value="0">All Cars</option>
           <option value="1" >SUV</option>
           <option value="2">Electric</option>
           <option value="3">Van</option>

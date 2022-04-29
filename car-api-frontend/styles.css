@@ -4,8 +4,9 @@
    body{
     background: rgb(0, 0, 112);
     max-width: fit-content;
+   
     margin:auto;
-
+    
     background-attachment: fixed;
     background-position: center;
     font-family: 'Josefin Sans', sans-serif;
@@ -13,6 +14,8 @@
     font-size: large;
     color: rgb(128, 128, 128);
     font-weight: bold;
+    
+    
   }
 
  .title{
@@ -28,6 +31,7 @@
   }
 
   li {
+    
     float: left;
     padding-left:60px;
     margin-top: 50px;
@@ -35,6 +39,7 @@
     list-style: none;
     font-weight: bold;
     color: rgb(111, 191, 194);
+
   }
 
   #car-form-container {
@@ -45,6 +50,8 @@
     border: 3px solid #8AC007;
     text-align:center;
     background-color: lightblue;
+    padding-bottom: 1%;
+   
   }
 
   #category-form-container{
