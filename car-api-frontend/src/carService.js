@@ -54,6 +54,5 @@ class CarService{
       .then(resp => resp.json())
       .then(car => Car.all = Car.all.filter(car => car.id !== id))
       alert("Car Successfully Deleted")
-      
   }
 }

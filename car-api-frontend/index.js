@@ -39,6 +39,18 @@ function handleCarSubmit(event){
   }
 }
 
+
+// Live Coding Challenge
+button = document.getElementById("user-comments-submit")
+
+button.addEventListener('click', handleButtonSubmit)
+
+function handleButtonSubmit(event) {
+  userInput = document.getElementById("user-comments-input").value
+  event.preventDefault()
+  Category.categoryContainer.innerHTML +=userInput
+}
+
   
   
 
