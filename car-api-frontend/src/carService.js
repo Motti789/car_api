@@ -40,6 +40,7 @@ class CarService{
      .then(car => { 
        const c = new Car(car)
        c.slapOnDom()
+       alert("Car Successfully Created.")
      })
 
   }
