@@ -18,7 +18,7 @@ function handleCarSubmit(event){
     event.target.reset()
 }
 
-  function handleCategoryChange(event) {
+function filteredCars (event) {
   // We remove the car container elements from the dom
   Car.carContainer.innerHTML = ""
   let c = event.target.value 
@@ -29,6 +29,12 @@ function handleCarSubmit(event){
    for (const car of selectedCars) {
     car.slapOnDom()
   }
+
+}
+
+  function handleCategoryChange(event) {
+   filteredCars(event);
+  
   // Display all of the cars if the user wants to go back.
   if (event.target.value === '0') {
    let selectedCars = Car.all
