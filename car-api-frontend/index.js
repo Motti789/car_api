@@ -34,11 +34,17 @@ function filteredCars (event) {
 
 function handleCategoryChange(event) {
   filteredCars(event);
- // Display all of the cars if the user wants to go back.
- if (event.target.value === '0') {
-   carService.getCars();
- }
+  // Display all of the cars if the user wants to go back.
+  if (event.target.value === '0') {
+    let selectedCars = Car.all
+    for (const car of selectedCars) {
+      car.slapOnDom()
+    }
+  }
 }
+
+
+
 
 
 // // Live Coding Challenge
