@@ -1,4 +1,3 @@
-
 const base_url = "http://localhost:3000"
 const carService = new CarService(base_url)
 
@@ -9,7 +8,7 @@ Car.renderForm()
 
 
 const categoryService = new CategoryService(base_url)
-Category.categoryForm.addEventListener('change', handleCategorySubmit)
+Category.categoryForm.addEventListener('change', handleCategoryChange)
 Category.renderCategoryForm()
 
 
@@ -19,7 +18,7 @@ function handleCarSubmit(event){
     event.target.reset()
 }
 
-  function handleCategorySubmit(event) {
+  function handleCategoryChange(event) {
   // We remove the car container elements from the dom
   Car.carContainer.innerHTML = ""
   let c = event.target.value 
