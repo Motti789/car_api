@@ -30,18 +30,13 @@ function filteredCars (event) {
    for (const car of selectedCars) {
     car.slapOnDom()
   }
-
 }
 
 function handleCategoryChange(event) {
   filteredCars(event);
- 
  // Display all of the cars if the user wants to go back.
  if (event.target.value === '0') {
-  let selectedCars = Car.all
-  for (const cars of selectedCars) {
-   cars.slapOnDom()
- }
+   carService.getCars();
  }
 }
 
