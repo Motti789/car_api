@@ -18,6 +18,7 @@ function handleCarSubmit(event){
     event.target.reset()
 }
 
+
 function filteredCars (event) {
   // We remove the car container elements from the dom
   Car.carContainer.innerHTML = ""
@@ -32,29 +33,29 @@ function filteredCars (event) {
 
 }
 
-  function handleCategoryChange(event) {
-   filteredCars(event);
-  
-  // Display all of the cars if the user wants to go back.
-  if (event.target.value === '0') {
-   let selectedCars = Car.all
-   for (const cars of selectedCars) {
-    cars.slapOnDom()
-  }
-  }
+function handleCategoryChange(event) {
+  filteredCars(event);
+ 
+ // Display all of the cars if the user wants to go back.
+ if (event.target.value === '0') {
+  let selectedCars = Car.all
+  for (const cars of selectedCars) {
+   cars.slapOnDom()
+ }
+ }
 }
 
 
-// Live Coding Challenge
-button = document.getElementById("user-comments-submit")
+// // Live Coding Challenge
+// button = document.getElementById("user-comments-submit")
 
-button.addEventListener('click', handleButtonSubmit)
+// button.addEventListener('click', handleButtonSubmit)
 
-function handleButtonSubmit(event) {
-  userInput = document.getElementById("user-comments-input").value
-  event.preventDefault()
-  Category.categoryContainer.innerHTML +=userInput
-}
+// function handleButtonSubmit(event) {
+//   userInput = document.getElementById("user-comments-input").value
+//   event.preventDefault()
+//   Category.categoryContainer.innerHTML +=userInput
+// }
 
   
   
