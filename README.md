@@ -26,8 +26,6 @@ rails db:seed
 
 Then execute "rails s" to start up the local server on localhost:3000.
 
-Next, **make sure to navigate to the frontend directory**. You can type npm install to install all package dependencies.  
-
 Once all the dependencies are installed, open the index.html file either from the terminal with open index.html or from your Finder or Explorer.
 
 License:
