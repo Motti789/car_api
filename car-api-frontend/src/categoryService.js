@@ -1,4 +1,4 @@
-import { Category } from "./category"
+
 
 class CategoryService {
 
@@ -17,3 +17,5 @@ class CategoryService {
       })
     }
 }
+
+ 

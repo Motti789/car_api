@@ -1,4 +1,3 @@
-import { Car } from "./car"
 
 class CarService{
  
@@ -57,3 +56,4 @@ class CarService{
       alert("Car Successfully Deleted")
   }
 }
+
