@@ -1,3 +1,5 @@
+import { Category } from "./category"
+
 class CategoryService {
 
     constructor(endpoint){

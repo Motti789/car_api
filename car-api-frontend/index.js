@@ -1,3 +1,6 @@
+import {CarService} from "./src"
+import {CategoryService} from "./src"
+
 const base_url = "http://localhost:3000"
 const carService = new CarService(base_url)
 
@@ -42,6 +45,11 @@ function handleCategoryChange(event) {
     }
   }
 }
+
+
+
+
+
 
 
 
